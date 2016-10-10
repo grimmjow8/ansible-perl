@@ -1,4 +1,6 @@
-ansible-perl [![Build Status](https://travis-ci.org/grimmjow8/ansible-perl.png)](https://travis-ci.org/grimmjow8/ansible-perl)
+## ansible-perl
+
+Build Status:  [![Build Status](https://travis-ci.org/grimmjow8/ansible-perl.png)](https://travis-ci.org/grimmjow8/ansible-perl)
 
 =========
 
