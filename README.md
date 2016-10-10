@@ -25,4 +25,4 @@ Licensed under the MIT License. See the LICENSE file for details.
 Author Information
 ------------------
 
-<TBD>
+TBD
