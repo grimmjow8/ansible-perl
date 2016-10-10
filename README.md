@@ -1,4 +1,5 @@
-ansible-perl
+ansible-perl [![Build Status](https://travis-ci.org/grimmjow8/ansible-perl.png)](https://travis-ci.org/grimmjow8/ansible-perl)
+
 =========
 
 Ansible role installs cpanm and generally useful perl modules from CPAN.
