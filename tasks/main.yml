@@ -1,0 +1,11 @@
+---
+# tasks file for ansible-perl
+- name: install cpanminus module manager
+  apt: name={{item}} state=present
+  with_items:
+    - cpanminus
+
+- name: install perl modules
+  cpanm: name={{item}}
+  with_items:
+    - File::Slurp

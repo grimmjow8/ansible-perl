@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Ryan Brown
+  description: Install perl with common modules.
+  license: MIT
+  min_ansible_version: 2.1.2.0
+  
+  platforms:
+   - name: Linuxmint
+     versions:
+      - sarah
+
+  galaxy_tags:
+   - system
+
+dependencies: []
