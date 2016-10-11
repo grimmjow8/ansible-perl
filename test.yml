@@ -1,5 +1,3 @@
 - hosts: all
   roles:
-  - { role: ansible-perl }
-#  tasks:
-#    - include: 'tasks/main.yml'
+  - { role: ansible-perl, sudo: yes }
