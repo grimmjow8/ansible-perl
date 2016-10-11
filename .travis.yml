@@ -21,6 +21,8 @@ install:
   # Create ansible.cfg with correct roles_path
   - printf '[defaults]\nroles_path=../' >ansible.cfg
 
+before_script: cd /home/travis/build/grimmjow8/ansible-perl; pwd
+
 script:
   # Basic role syntax check
   - ansible-playbook tests/test.yml --syntax-check
