@@ -23,9 +23,15 @@ install:
 
 script:
   # Basic role syntax check
-  - cd /home/travis/build/grimmjow8/ansible-perl; pwd
+  - echo localhost > hostfile
   - ansible-playbook tests/test.yml --syntax-check
-  - ansible-playbook tests/test.yml
+  - ansible-playbook tests/test.yml -vvv
+  - >
+    ansible-playbook tests/test.yml
+    | grep -q 'changed=0.*failed=0'
+    && (echo 'playbook test: pass' && exit 0)
+    || (echo 'playbook test: fail' && exit 1)
+
 
 notifications:
   webhooks: https://galaxy.ansible.com/api/v1/notifications/
