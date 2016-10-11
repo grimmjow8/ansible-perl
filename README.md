@@ -14,6 +14,12 @@ Example Playbook
       roles:
          - { role: grimmjow8.ansible-perl }
 
+
+Testing
+-------
+<path>/ansible-perl $ ansible-playbook test.yml 
+
+
 License
 -------
 

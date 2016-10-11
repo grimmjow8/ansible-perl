@@ -4,8 +4,16 @@
   apt: name={{item}} state=present
   with_items:
     - cpanminus
+  tags: [perl,cpan,install]
 
+# TODO - move this out to separate file
+#   "{{item}}"
+#   with_lines: cat files/modules.txt
 - name: install perl modules
   cpanm: name={{item}}
   with_items:
     - File::Slurp
+    - File::Tee
+    - IO::Tee
+    - Log::Log4perl.pm
+  tags: [perl,cpan,install]
