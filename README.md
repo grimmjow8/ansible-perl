@@ -17,7 +17,7 @@ Example Playbook
 
 Testing
 -------
-<path>/ansible-perl $ ansible-playbook test.yml 
+\<path\>/ansible-perl $ ansible-playbook test.yml 
 
 
 License
