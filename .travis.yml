@@ -3,7 +3,7 @@ language: python
 python: "2.7"
 
 # Use the new container infrastructure
-sudo: false
+sudo: required
 
 # Install ansible
 addons:
@@ -23,6 +23,8 @@ install:
 
 script:
   # Basic role syntax check
+  - echo whoami ; whoami
+  - echo pwd ; pwd
   - ansible-playbook -i tests/inventory --syntax-check tests/test.yml
   - ansible-playbook -i tests/inventory --connection=local --become -vvvv tests/test.yml
   - >
