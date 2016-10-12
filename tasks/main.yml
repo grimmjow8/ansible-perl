@@ -15,5 +15,6 @@
     - File::Slurp
     - File::Tee
     - IO::Tee
-    - Log::Log4perl.pm
+    - Log::Log4perl
+    - Devel::Cover
   tags: [perl,cpan,install]

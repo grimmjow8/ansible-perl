@@ -3,7 +3,7 @@ language: python
 python: "2.7"
 
 # Use the new container infrastructure
-sudo: true
+sudo: false
 
 # Install ansible
 addons:
@@ -19,15 +19,14 @@ install:
   - ansible --version
 
   # Create ansible.cfg with correct roles_path
-  - printf '[defaults]\nroles_path=../' >ansible.cfg
+  - printf '[defaults]\nroles_path=../\nnocows = 1' >ansible.cfg
 
 script:
   # Basic role syntax check
-  - echo localhost > hostfile
-  - ansible-playbook tests/test.yml --syntax-check
-  - ansible-playbook tests/test.yml -vvv
+  - ansible-playbook -i tests/inventory --syntax-check tests/test.yml
+  - ansible-playbook -i tests/inventory --connection=local --become -vvvv tests/test.yml
   - >
-    ansible-playbook tests/test.yml
+    ansible-playbook -i tests/inventory --connection=local --become -vvvv tests/test.yml
     | grep -q 'changed=0.*failed=0'
     && (echo 'playbook test: pass' && exit 0)
     || (echo 'playbook test: fail' && exit 1)
