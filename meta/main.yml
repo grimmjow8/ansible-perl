@@ -1,6 +1,6 @@
 galaxy_info:
   author: Ryan Brown
-  description: Install perl with common modules.
+  description: Ansible role installs cpanm and generally useful perl modules from CPAN.
   license: MIT
   min_ansible_version: 2.1.2.0
   

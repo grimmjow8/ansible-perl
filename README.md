@@ -5,7 +5,7 @@ Ansible role installs cpanm and generally useful perl modules from CPAN.
 Requirements
 ------------
 
-- Test on ansible 2.1.2.0
+- Tested on ansible 2.1.2.0
 
 Example Playbook
 ----------------
